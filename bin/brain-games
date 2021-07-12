@@ -1,6 +1,5 @@
 #!/usr/bin/php
 <?php
-namespace Php\Project\Lvl1\Cli;
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 if (file_exists($autoloadPath1)) {
@@ -8,4 +7,10 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-greeting();
+
+echo 'what is your name?: ';
+$name = trim(fgets(STDIN));
+
+$user = new Php\Package\User($name);
+
+var_dump($user);

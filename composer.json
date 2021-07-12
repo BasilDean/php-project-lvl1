@@ -1,13 +1,11 @@
 {
-    "name": "hexlet/code",
+    "name": "hexlet/php-project-lvl1",
     "bin": ["bin/brain-games"],
     "description": "my-first-step",
     "license": "proprietary",
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/",
-      "Php\\Package\\": "src",
-      "Php\\Package\\Tests\\": "tests"
+            "Php\\Project\\Lvl1\\": "src"
         }
     },
     "authors": [
