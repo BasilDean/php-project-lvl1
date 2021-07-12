@@ -1,5 +1,5 @@
 <?php
-namespace Php\Project\Lvl1;
+namespace Php\Project\Lvl1\Cli;
 use function cli\line;
 use function cli\prompt;
 function Greeting()
