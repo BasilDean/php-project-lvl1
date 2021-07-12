@@ -4,9 +4,9 @@
     "description": "my-first-step",
     "license": "proprietary",
     "autoload": {
-        "psr-4": {
-            "Php\\Project\\Lvl1\\": "src"
-        }
+        "files": [
+            "src/Cli.php"
+        ]
     },
     "authors": [
         {
