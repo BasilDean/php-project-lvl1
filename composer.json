@@ -2,14 +2,16 @@
     "name": "hexlet/php-project-lvl1",
     "bin": [
     	"bin/brain-games",
-    	"bin/brain-even"
+    	"bin/brain-even",
+    	"bin/brain-calc"
     ],
     "description": "my-first-step",
     "license": "proprietary",
     "autoload": {
         "files": [
             "src/Cli.php", 
-            "src/Even.php"
+            "src/Even.php", 
+            "src/Calc.php"
         ]
     },
     "authors": [
