@@ -21,7 +21,7 @@ function brainProgression()
         $missingElement = $arr[$numberOfMissingElement];
         $arr[$numberOfMissingElement] = '..';
         $expectedAnswer = $missingElement;
-        $string = implode($arr, ' ');
+        $string = implode(' ', $arr);
         $questions[] = "Question: " . $string;
         $expectedAnswers[] = $expectedAnswer;
         $i++;
