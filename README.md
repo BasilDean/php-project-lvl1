@@ -4,3 +4,4 @@
 ![example workflow](https://github.com/BasilDean/php-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 https://asciinema.org/a/HKDWSFemSBXsPh38XHKqX0x7S - asciinema 5th task
 https://asciinema.org/a/qxAp2AmLY9sQvOT0EX9tDu73F - asciinema 6th task
+https://asciinema.org/a/uYQbZuOt2sgEuATofmLjAyUtx - asciinema 7th task
