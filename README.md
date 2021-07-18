@@ -6,3 +6,4 @@ https://asciinema.org/a/HKDWSFemSBXsPh38XHKqX0x7S - asciinema 5th task
 https://asciinema.org/a/qxAp2AmLY9sQvOT0EX9tDu73F - asciinema 6th task
 https://asciinema.org/a/uYQbZuOt2sgEuATofmLjAyUtx - asciinema 7th task
 https://asciinema.org/a/WUpLp5LyUgfdGsnwwm9yy8uWI - asciinema 8th task
+https://asciinema.org/a/eoa4vUeaPD9oAiNuSH9d6f6fy - asciinema 9th task
