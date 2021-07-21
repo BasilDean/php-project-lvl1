@@ -4,10 +4,12 @@ namespace Php\Project\Lvl1\Games\Progression;
 
 use Php\Project\Lvl1\Engine;
 
-function brainProgression()
+function brainProgression(): Collection
 {
-    $rules = 'What number is missing in the progression?';
+    $description = 'What number is missing in the progression?';
     $i = 0;
+    $questions = [];
+    $expectedAnswers = [];
     while ($i <= 2) {
         $arr = [];
         $arrayLength = rand(4, 9);
@@ -26,5 +28,5 @@ function brainProgression()
         $expectedAnswers[] = $expectedAnswer;
         $i++;
     }
-    Engine\makeGame($rules, $questions, $expectedAnswers);
+    Engine\makeGame($description, $questions, $expectedAnswers);
 }

@@ -5,12 +5,12 @@ namespace Php\Project\Lvl1\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function makeGame($rules, $questions, $expectedAnswers)
+function makeGame(string $description, array $questions, array $expectedAnswers)
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line($rules);
+    line($description);
     for ($i = 0; $i <= 2; $i++) {
         line($questions[$i]);
         $answer = prompt('Your answer');

@@ -4,7 +4,7 @@ namespace Php\Project\Lvl1\Games\Gcd;
 
 use Php\Project\Lvl1\Engine;
 
-function gcd($n, $m)
+function gcd(int $n, int $m): int
 {
     if ($m > 0) {
         return gcd($m, $n % $m);
@@ -13,9 +13,9 @@ function gcd($n, $m)
     }
 }
 
-function findGcd()
+function findGcd(): Collection
 {
-    $rules = 'Find the greatest common divisor of given numbers.';
+    $description = 'Find the greatest common divisor of given numbers.';
     $i = 0;
     while ($i <= 2) {
         $number1 = rand(1, 99);
@@ -25,5 +25,5 @@ function findGcd()
         $expectedAnswers[] = $expectedAnswer;
         $i++;
     }
-    Engine\makeGame($rules, $questions, $expectedAnswers);
+    Engine\makeGame($description, $questions, $expectedAnswers);
 }
