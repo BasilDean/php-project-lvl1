@@ -13,17 +13,19 @@ function gcd(int $n, int $m): int
     }
 }
 
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 function findGcd(): void
 {
-    $description = 'Find the greatest common divisor of given numbers.';
-    $i = 0;
-    while ($i <= 2) {
+    $roundNumber = 0;
+    $questions = [];
+    $expectedAnswers = [];
+    while ($roundNumber <= 2) {
         $number1 = rand(1, 99);
         $number2 = rand(1, 99);
         $expectedAnswer = gcd($number1, $number2);
         $questions[] = "Question: " . $number1 . ' ' . $number2;
         $expectedAnswers[] = $expectedAnswer;
-        $i++;
+        $roundNumber++;
     }
-    Engine\makeGame($description, $questions, $expectedAnswers);
+    Engine\runGame(DESCRIPTION, $questions, $expectedAnswers);
 }

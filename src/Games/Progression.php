@@ -4,13 +4,13 @@ namespace Php\Project\Lvl1\Games\Progression;
 
 use Php\Project\Lvl1\Engine;
 
+const DESCRIPTION = 'What number is missing in the progression?';
 function brainProgression(): void
 {
-    $description = 'What number is missing in the progression?';
-    $i = 0;
+    $roundNumber = 0;
     $questions = [];
     $expectedAnswers = [];
-    while ($i <= 2) {
+    while ($roundNumber <= 2) {
         $arr = [];
         $arrayLength = rand(4, 9);
         $startElement = rand(0, 20);
@@ -26,7 +26,7 @@ function brainProgression(): void
         $string = implode(' ', $arr);
         $questions[] = "Question: " . $string;
         $expectedAnswers[] = $expectedAnswer;
-        $i++;
+        $roundNumber++;
     }
-    Engine\makeGame($description, $questions, $expectedAnswers);
+    Engine\runGame(DESCRIPTION, $questions, $expectedAnswers);
 }

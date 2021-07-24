@@ -4,13 +4,13 @@ namespace Php\Project\Lvl1\Games\Prime;
 
 use Php\Project\Lvl1\Engine;
 
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 function brainPrime(): void
 {
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $i = 0;
+    $roundNumber = 0;
     $questions = [];
     $expectedAnswers = [];
-    while ($i <= 2) {
+    while ($roundNumber <= 2) {
         $number = rand(1, 999);
         $answer = 'yes';
         for ($x = 2; $x < $number; $x++) {
@@ -21,7 +21,7 @@ function brainPrime(): void
         $expectedAnswer = $answer;
         $questions[] = "Question: " . $number;
         $expectedAnswers[] = $answer;
-        $i++;
+        $roundNumber++;
     }
-    Engine\makeGame($description, $questions, $expectedAnswers);
+    Engine\runGame(DESCRIPTION, $questions, $expectedAnswers);
 }

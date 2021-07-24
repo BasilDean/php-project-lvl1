@@ -4,14 +4,14 @@ namespace Php\Project\Lvl1\Games\Calc;
 
 use Php\Project\Lvl1\Engine;
 
+const DESCRIPTION = 'What is the result of the expression?';
 function brainCalc(): void
 {
-    $description = 'What is the result of the expression?';
-    $i = 0;
+    $roundNumber = 0;
     $operations = ['+', '-', '*'];
     $questions = [];
     $expectedAnswers = [];
-    while ($i <= 2) {
+    while ($roundNumber <= 2) {
         $operationNumber = rand(0, 2);
         $operation = $operations[$operationNumber];
         $firstNumber = rand(0, 99);
@@ -28,7 +28,7 @@ function brainCalc(): void
                 $expectedAnswers[] = $firstNumber * $secondNumber;
                 break;
         }
-        $i++;
+        $roundNumber++;
     }
-    Engine\makeGame($description, $questions, $expectedAnswers);
+    Engine\runGame(DESCRIPTION, $questions, $expectedAnswers);
 }
