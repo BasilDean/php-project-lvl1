@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Prime;
+namespace BrainGames\Games\Prime;
 
-use Php\Project\Lvl1\Engine;
+use BrainGames\Engine;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 function brainPrime(): void

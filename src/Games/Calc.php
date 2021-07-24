@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Calc;
+namespace BrainGames\Games\Calc;
 
-use Php\Project\Lvl1\Engine;
+use BrainGames\Engine;
 
 const DESCRIPTION = 'What is the result of the expression?';
 function brainCalc(): void

@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Even;
+namespace BrainGames\Games\Even;
 
-use Php\Project\Lvl1\Engine;
+use BrainGames\Engine;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 function brainEven(): void

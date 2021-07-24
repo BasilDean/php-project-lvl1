@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Progression;
+namespace BrainGames\Games\Progression;
 
-use Php\Project\Lvl1\Engine;
+use BrainGames\Engine;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 function brainProgression(): void

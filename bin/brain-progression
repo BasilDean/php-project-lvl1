@@ -11,5 +11,5 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use Php\Project\Lvl1\Games\Progression;
+use BrainGames\Games\Progression;
 Progression\brainProgression();
