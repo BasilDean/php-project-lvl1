@@ -18,14 +18,14 @@ function brainCalc(): void
         $secondNumber = rand(0, 99);
         $questions[] = 'Question: ' . $firstNumber . ' ' . $operation . ' ' . $secondNumber;
         switch ($operation) {
-            case '+':
-                $expectedAnswers[] = $firstNumber + $secondNumber;
-                break;
             case '-':
                 $expectedAnswers[] = $firstNumber - $secondNumber;
                 break;
             case '*':
                 $expectedAnswers[] = $firstNumber * $secondNumber;
+                break;
+            default:
+                $expectedAnswers[] = $firstNumber + $secondNumber;
                 break;
         }
         $roundNumber++;

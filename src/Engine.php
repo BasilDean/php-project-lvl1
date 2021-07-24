@@ -5,13 +5,14 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const ROUND_COUNTER = 2;
 function runGame(string $description, array $questions, array $expectedAnswers): void
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($description);
-    for ($roundNumber = 0; $roundNumber <= 2; $roundNumber++) {
+    for ($roundNumber = 0; $roundNumber <= ROUND_COUNTER; $roundNumber++) {
         line($questions[$roundNumber]);
         $answer = prompt('Your answer');
         if ($answer == $expectedAnswers[$roundNumber]) {
@@ -21,7 +22,7 @@ function runGame(string $description, array $questions, array $expectedAnswers):
             line("Let's try again, %s!", $name);
             break;
         }
-        if ($roundNumber == 2) {
+        if ($roundNumber == ROUND_COUNTER) {
             line("Congratulations, %s!", $name);
         }
     }
