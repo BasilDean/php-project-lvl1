@@ -4,7 +4,7 @@ namespace Php\Project\Lvl1\Games\Prime;
 
 use Php\Project\Lvl1\Engine;
 
-function brainPrime(): Collection
+function brainPrime(): void
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $i = 0;

@@ -4,7 +4,7 @@ namespace Php\Project\Lvl1\Games\Progression;
 
 use Php\Project\Lvl1\Engine;
 
-function brainProgression(): Collection
+function brainProgression(): void
 {
     $description = 'What number is missing in the progression?';
     $i = 0;

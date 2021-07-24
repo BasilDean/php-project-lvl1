@@ -4,7 +4,7 @@ namespace Php\Project\Lvl1\Games\Even;
 
 use Php\Project\Lvl1\Engine;
 
-function brainEven(): Collection
+function brainEven(): void
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no".';
     $i = 0;

@@ -4,7 +4,7 @@ namespace Php\Project\Lvl1\Games\Calc;
 
 use Php\Project\Lvl1\Engine;
 
-function brainCalc(): Collection
+function brainCalc(): void
 {
     $description = 'What is the result of the expression?';
     $i = 0;

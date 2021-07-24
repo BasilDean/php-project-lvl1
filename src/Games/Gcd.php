@@ -13,7 +13,7 @@ function gcd(int $n, int $m): int
     }
 }
 
-function findGcd(): Collection
+function findGcd(): void
 {
     $description = 'Find the greatest common divisor of given numbers.';
     $i = 0;
