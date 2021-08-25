@@ -8,7 +8,7 @@ use const BrainGames\Engine\ROUND_COUNTER;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function calc($n1, $n2, $operation)
+function calc(int $n1, int $n2, string $operation): int
 {
     switch ($operation) {
         case '-':
