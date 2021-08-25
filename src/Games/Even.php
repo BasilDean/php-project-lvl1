@@ -8,7 +8,7 @@ use const BrainGames\Engine\ROUND_COUNTER;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function is_even($n): bool
+function is_even(int $n): bool
 {
     return $n % 2 === 0;
 }
