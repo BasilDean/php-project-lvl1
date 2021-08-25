@@ -13,13 +13,10 @@ function calc(int $n1, int $n2, string $operation): int
     switch ($operation) {
         case '-':
             return $n1 - $n2;
-            break;
         case '*':
             return $n1 * $n2;
-            break;
         case '+':
             return $n1 + $n2;
-            break;
         default:
             throw new \Exception("Unknown operator: {$operation}");
     }
