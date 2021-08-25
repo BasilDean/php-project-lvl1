@@ -11,7 +11,7 @@ const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no
 function is_prime($n): bool
 {
     for ($x = 2; $x < $n; $x++) {
-        if ($number % $x == 0) {
+        if ($n % $x == 0) {
             return false;
         }
         return true;
