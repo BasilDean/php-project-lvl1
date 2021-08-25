@@ -2,7 +2,9 @@
 
 namespace BrainGames\Games\Gcd;
 
-use BrainGames\Engine;
+use function BrainGames\Engine\runGame;
+
+use const BrainGames\Engine\ROUND_COUNTER;
 
 function gcd(int $n, int $m): int
 {
@@ -27,5 +29,5 @@ function findGcd(): void
         $expectedAnswers[] = $expectedAnswer;
         $roundNumber++;
     }
-    Engine\runGame(DESCRIPTION, $questions, $expectedAnswers);
+    runGame(DESCRIPTION, $questions, $expectedAnswers);
 }

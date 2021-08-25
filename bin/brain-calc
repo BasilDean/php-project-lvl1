@@ -11,5 +11,5 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use BrainGames\Games\Calc;
-Calc\brainCalc();
+use function BrainGames\Games\Calc\brainCalc;
+brainCalc();

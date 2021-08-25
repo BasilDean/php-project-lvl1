@@ -15,15 +15,12 @@ function runGame(string $description, array $questions, array $expectedAnswers):
     for ($roundNumber = 0; $roundNumber <= ROUND_COUNTER; $roundNumber++) {
         line($questions[$roundNumber]);
         $answer = prompt('Your answer');
-        if ($answer == $expectedAnswers[$roundNumber]) {
-            line("Correct!");
-        } else {
+        if ($answer != $expectedAnswers[$roundNumber]) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $expectedAnswers[$roundNumber]);
             line("Let's try again, %s!", $name);
-            break;
+            return;
         }
-        if ($roundNumber == ROUND_COUNTER) {
-            line("Congratulations, %s!", $name);
-        }
+        line("Correct!");
     }
+    line("Congratulations, %s!", $name);
 }

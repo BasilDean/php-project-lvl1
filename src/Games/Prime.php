@@ -2,9 +2,22 @@
 
 namespace BrainGames\Games\Prime;
 
-use BrainGames\Engine;
+use function BrainGames\Engine\runGame;
+
+use const BrainGames\Engine\ROUND_COUNTER;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+function is_prime($n): bool
+{
+    for ($x = 2; $x < $n; $x++) {
+        if ($number % $x == 0) {
+            return false;
+        }
+        return true;
+    }
+}
+
 function brainPrime(): void
 {
     $roundNumber = 0;
@@ -12,16 +25,10 @@ function brainPrime(): void
     $expectedAnswers = [];
     while ($roundNumber <= 2) {
         $number = rand(1, 999);
-        $answer = 'yes';
-        for ($x = 2; $x < $number; $x++) {
-            if ($number % $x == 0) {
-                $answer = 'no';
-            }
-        }
-        $expectedAnswer = $answer;
+        $answer = is_prime($number) ? 'yes' : 'no';
         $questions[] = "Question: " . $number;
         $expectedAnswers[] = $answer;
         $roundNumber++;
     }
-    Engine\runGame(DESCRIPTION, $questions, $expectedAnswers);
+    runGame(DESCRIPTION, $questions, $expectedAnswers);
 }

@@ -2,7 +2,9 @@
 
 namespace BrainGames\Games\Progression;
 
-use BrainGames\Engine;
+use function BrainGames\Engine\runGame;
+
+use const BrainGames\Engine\ROUND_COUNTER;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 function brainProgression(): void
@@ -28,5 +30,5 @@ function brainProgression(): void
         $expectedAnswers[] = $expectedAnswer;
         $roundNumber++;
     }
-    Engine\runGame(DESCRIPTION, $questions, $expectedAnswers);
+    runGame(DESCRIPTION, $questions, $expectedAnswers);
 }
