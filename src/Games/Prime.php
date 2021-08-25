@@ -17,8 +17,8 @@ function is_prime($n): bool
         if (($n % $x) == 0) {
             return false;
         }
-        return true;
     }
+    return true;
 }
 
 function brainPrime(): void
