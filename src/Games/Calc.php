@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\runGame;
 
-use const BrainGames\Engine\ROUND_COUNTER;
+use const BrainGames\Engine\NUMBERS_OF_ROUNDS;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
@@ -23,11 +23,11 @@ function calc(int $n1, int $n2, string $operation): int
 }
 function brainCalc(): void
 {
-    $roundNumber = 0;
+    $roundNumber = 1;
     $operations = ['+', '-', '*'];
     $questions = [];
     $expectedAnswers = [];
-    while ($roundNumber <= ROUND_COUNTER) {
+    while ($roundNumber <= NUMBERS_OF_ROUNDS) {
         $operationNumber = rand(0, 2);
         $operation = $operations[$operationNumber];
         $firstNumber = rand(0, 99);

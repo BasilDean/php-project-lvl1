@@ -4,15 +4,15 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\runGame;
 
-use const BrainGames\Engine\ROUND_COUNTER;
+use const BrainGames\Engine\NUMBERS_OF_ROUNDS;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 function brainProgression(): void
 {
-    $roundNumber = 0;
+    $roundNumber = 1;
     $questions = [];
     $expectedAnswers = [];
-    while ($roundNumber <= 2) {
+    while ($roundNumber <= NUMBERS_OF_ROUNDS) {
         $arr = [];
         $arrayLength = rand(4, 9);
         $startElement = rand(0, 20);
