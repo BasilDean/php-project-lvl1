@@ -13,7 +13,7 @@ function is_prime(int $n): bool
     if (($n === 1) || ($n === 2)) {
         return true;
     }
-    for ($x = 2; $x < $n; $x++) {
+    for ($x = 2; $x < $n / 2; $x++) {
         if (($n % $x) == 0) {
             return false;
         }
