@@ -28,7 +28,7 @@ function brainCalc(): void
     $questions = [];
     $expectedAnswers = [];
     while ($roundNumber <= NUMBERS_OF_ROUNDS) {
-        $operationNumber = rand(0, 2);
+        $operationNumber = rand(0, sizeof($operations));
         $operation = $operations[$operationNumber];
         $firstNumber = rand(0, 99);
         $secondNumber = rand(0, 99);
