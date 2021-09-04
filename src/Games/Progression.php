@@ -14,14 +14,14 @@ function brainProgression(): void
     $expectedAnswers = [];
     while ($roundNumber <= NUMBERS_OF_ROUNDS) {
         $arr = [];
-        $arrayLength = rand(4, 9);
-        $startElement = rand(0, 20);
+        $length = rand(4, 9);
+        $firstElem = rand(0, 20);
         $step = rand(1, 15);
-        $arr[0] = $startElement;
-        for ($j = 1; $j <= $arrayLength; $j++) {
+        $arr[0] = $firstElem;
+        for ($j = 1; $j <= $length; $j++) {
             $arr[] = $arr[$j - 1] + $step;
         }
-        $numberOfMissingElement = rand(0, $arrayLength);
+        $numberOfMissingElement = rand(0, $length);
         $missingElement = $arr[$numberOfMissingElement];
         $arr[$numberOfMissingElement] = '..';
         $expectedAnswer = $missingElement;
