@@ -28,11 +28,11 @@ function brainCalc(): void
     $questions = [];
     $expectedAnswers = [];
     while ($roundNumber <= NUMBERS_OF_ROUNDS) {
-        $operationNumber = rand(0, sizeof($operations));
+        $operationNumber = rand(0, sizeof($operations) - 1);
         $operation = $operations[$operationNumber];
         $firstNumber = rand(0, 99);
         $secondNumber = rand(0, 99);
-        $questions[] = 'Question: ' . $firstNumber . ' ' . $operation . ' ' . $secondNumber;
+        $questions[] = $firstNumber . ' ' . $operation . ' ' . $secondNumber;
         $expectedAnswers[] = calc($firstNumber, $secondNumber, $operation);
         $roundNumber++;
     }

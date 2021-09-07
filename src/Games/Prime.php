@@ -29,7 +29,7 @@ function brainPrime(): void
     while ($roundNumber <= NUMBERS_OF_ROUNDS) {
         $number = rand(1, 999);
         $answer = is_prime($number) ? 'yes' : 'no';
-        $questions[] = "Question: " . $number;
+        $questions[] = $number;
         $expectedAnswers[] = $answer;
         $roundNumber++;
     }

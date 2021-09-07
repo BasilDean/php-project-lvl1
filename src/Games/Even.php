@@ -20,7 +20,7 @@ function brainEven(): void
     $expectedAnswers = [];
     while ($roundNumber <= NUMBERS_OF_ROUNDS) {
         $number = rand(1, 99);
-        $questions[] = "Question: " . $number;
+        $questions[] = $number;
         $expectedAnswer = is_even($number) ? 'yes' : 'no';
         $expectedAnswers[] = $expectedAnswer;
         $roundNumber++;

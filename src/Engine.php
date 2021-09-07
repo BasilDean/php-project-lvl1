@@ -13,9 +13,9 @@ function runGame(string $description, array $questions, array $expectedAnswers):
     line("Hello, %s!", $name);
     line($description);
     for ($roundNumber = 1; $roundNumber <= NUMBERS_OF_ROUNDS; $roundNumber++) {
-        line($questions[$roundNumber]);
+        line('Question: %s', $questions[$roundNumber - 1]);
         $answer = prompt('Your answer');
-        if ($answer != $expectedAnswers[$roundNumber]) {
+        if ($answer != $expectedAnswers[$roundNumber - 1]) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $expectedAnswers[$roundNumber]);
             line("Let's try again, %s!", $name);
             return;
