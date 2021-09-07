@@ -25,6 +25,7 @@ function findGcd(): void
         $number1 = rand(1, 99);
         $number2 = rand(1, 99);
         $expectedAnswer = gcd($number1, $number2);
+        $questions[] = $number1 . ' ' . $number2;
         $expectedAnswers[] = $expectedAnswer;
         $roundNumber++;
     }
